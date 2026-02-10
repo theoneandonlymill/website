@@ -1,10 +1,13 @@
-## This is the configuration file for Netlify
-## https://docs.netlify.com/configure-builds/file-based-configuration/
+# This is the configuration file for Netlify
+# https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  command = "npm run generate" # how to build your project
-  functions = "netlify/functions" # where Netlify Functions live
-  publish = "dist" # where the built project lives
+  # Build your Nuxt site as static HTML for Netlify
+  command = "npm run generate"
+  publish = "dist"
+  functions = "netlify/functions"
 
-  [[plugins]]
+# Enable the Netlify Visual Editor plugin
+[[plugins]]
 package = "@netlify/plugin-visual-editor"
+``
