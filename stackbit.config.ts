@@ -4,39 +4,34 @@ import { GitContentSource } from '@stackbit/cms-git';
 
 export default defineStackbitConfig({
   stackbitVersion: '~0.6.0',
-  // The Visual Editor will open your running dev server during editing.
-  // Nuxt runs on http://localhost:3000 by default.
+
+  // Visual Editor needs to know how to run your local dev server
   ssgName: 'custom',
   devCommand: 'npm run dev',
   devPort: 3000,
 
   contentSources: [
     new GitContentSource({
-      // Root of repo
       rootPath: __dirname,
 
-      // Tell the editor where your content files live.
-      // You can expand this later to include Markdown/JSON files.
+      // Expose your existing content folder(s)
       contentDirs: ['data'],
 
-      // Minimal “Page” model so you can extend later.
-      // If you later move content into JSON/MD files, define them here.
+      // Map the homepage JSON so you can edit it visually right away
       models: [
         {
-          name: 'Page',
+          name: 'HomePage',
           type: 'page',
-          // The URL path pattern for pages generated from files
-          urlPath: '/{slug}',
-          // Example JSON location (adjust to your actual file naming)
-          filePath: 'data/pages/{slug}.json',
+          urlPath: '/',
+          filePath: 'data/home.json',
           fields: [
             { name: 'title', type: 'string', required: true },
-            { name: 'body', type: 'string', required: false }
+            { name: 'body', type: 'string' }
           ]
         }
       ],
 
-      // Where images are stored/served
+      // Configure where images are stored & how they’re referenced
       assetsConfig: {
         referenceType: 'static',
         staticDir: 'public',   // Nuxt serves static files from /public
@@ -46,3 +41,4 @@ export default defineStackbitConfig({
     })
   ]
 });
+``
