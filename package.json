@@ -10,18 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@stackbit/cms-git": "^0.2.12",
+    "@stackbit/types": "^0.6.19",
     "nuxt": "3.21.1",
     "nuxt-icon": "^0.6.10",
     "tailwindcss": "^4.0.16",
     "vue": "^3.4.3",
-    "vue-router": "^4.2.5",
-
-    "@stackbit/types": "^0.6.19",
-    "@stackbit/cms-git": "^0.2.12"
+    "vue-router": "^4.2.5"
   },
   "dependencies": {
     "@nuxt/image": "^2.0.0",
     "@tailwindcss/vite": "^4.0.16"
   }
 }
-``
