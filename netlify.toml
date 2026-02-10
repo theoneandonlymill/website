@@ -10,4 +10,3 @@
 # Enable the Netlify Visual Editor plugin
 [[plugins]]
 package = "@netlify/plugin-visual-editor"
-``
