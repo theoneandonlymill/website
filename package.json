@@ -21,3 +21,8 @@
     "@tailwindcss/vite": "^4.0.16"
   }
 }
+{
+  "devDependencies": {
+    "@netlify/plugin-visual-editor": "^1.4.1"
+  }
+}
